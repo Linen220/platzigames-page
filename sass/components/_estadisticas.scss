@@ -50,8 +50,12 @@
 	text-align: center;
 	ul {
 		display: flex;
+		font-size: 16px;
 		gap: 30px;
 		padding: 0;
+		@include media(desktop-s){
+			font-size: 1.125rem;
+		}
 	}
 	li {
 		display: flex;

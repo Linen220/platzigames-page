@@ -1,14 +1,26 @@
 .footer--principal {
     display: flex;
-    height: 130px;
+    flex-direction: column;
+    height: 430px;
+    width: 100%;
     margin-top: 30px;
     padding: 0 20px 20px 20px;
     background-color: $color-primario;
+    @include media(desktop-s){
+        flex-direction: row;
+        height: 130px;
+    }
 }
 // RECOMENDACIÓN: NO USAR MIXINS EN FOOTER Y HEADER
 .nav--footer ul {
     display: flex;
+    flex-direction: column;
     padding-top: 35px;
+    padding-left: 0;
+    @include media(desktop-s){
+        flex-direction: row;
+        padding-left: 40px;
+    }
     li {
         list-style: none;
         margin-right: 50px;
@@ -20,15 +32,25 @@
 }
 
 .nav--social {
-    margin-left: auto;
+    margin-left: 0;
+    @include media(desktop-s){
+        margin-left: auto;
+    }
     ul {
         display: flex;
         padding-top: 35px;
+        padding-left: 0;
+        @include media(desktop-s){
+            padding-left: 40px;
+        }
     }
     li {
         list-style: none;
-        margin-right: 50px;
+        margin-right: 25px;
         color: $color-claro;
+        @include media(desktop-s){
+            margin-right: 50px;
+        }
     }
     a {
         color: $color-claro;

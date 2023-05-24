@@ -2,7 +2,11 @@
     max-height: 580px;
     max-width: 300px;
     padding: 20px;
+    border-radius: 7px;
     @include caja();
+	@include media(desktop-s){
+		border-radius: 0;
+	}
     h3 {
         padding: 10px 0;
         @include font-size(20px);
